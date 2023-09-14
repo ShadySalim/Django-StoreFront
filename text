@@ -1,0 +1,8 @@
+    = models.CharField(max_length=255)
+    = models.SlugField()
+     = models.TextField()
+    = models.DecimalField(max_digits=6, decimal_places=2)
+    = models.IntegerField()
+     = models.DateTimeField(auto_now=True)
+    = models.ForeignKey(Collection, on_delete=models.PROTECT)
+     = models.ManyToManyField(Promotion)

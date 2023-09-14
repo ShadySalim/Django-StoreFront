@@ -1,0 +1,23 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<div class="container">
+    <h1 class="text-center mt-4">Product Page</h1>
+    <div class="row">
+        {% for product in products %}
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="product-card shadow">
+                    <div class="product-details">
+                        <h2 class="product-title">{{ product.title }}</h2>
+                        <p class="product-price">${{ product.unit_price }}</p>
+                        <p class="product-description">{{ product.description }}</p>
+                        <a href="#" class="btn btn-primary btn-add-to-cart">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+{% endblock %}
